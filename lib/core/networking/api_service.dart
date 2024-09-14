@@ -2,6 +2,7 @@
 
 import 'package:dio/dio.dart';
 import 'package:elevante/core/networking/api_constants.dart';
+import 'package:elevante/features/products/data/models/get_response_products.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'api_service.g.dart';
@@ -9,4 +10,7 @@ part 'api_service.g.dart';
 @RestApi(baseUrl: Apiconstants.baseUrl)
 abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
+
+  @GET(Apiconstants.products)
+  Future<List<GetResponseProducts>> getProducts();
 }
