@@ -1,9 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:elevante/core/theming/colors.dart';
+import 'package:flutter/material.dart';
 
 ThemeData theme() => ThemeData(
-      primaryColor: ColorsManager.burbel,
-      fontFamily: 'Work Sans',
+      primaryColor: ColorsManager.blue,
       scaffoldBackgroundColor: ColorsManager.white,
       appBarTheme: const AppBarTheme(
         backgroundColor: ColorsManager.white,
