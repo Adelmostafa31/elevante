@@ -3,13 +3,13 @@ part 'get_response_products.g.dart';
 
 @JsonSerializable()
 class GetResponseProducts {
-  final String id;
+  final int id;
   final String title;
   final String description;
   dynamic price;
   final String category;
   final String image;
-  final Ratings rating;
+  final Map<String, dynamic> rating;
 
   GetResponseProducts({
     required this.id,
@@ -24,19 +24,4 @@ class GetResponseProducts {
   factory GetResponseProducts.fromJson(Map<String, dynamic> json) =>  _$GetResponseProductsFromJson(json);
 
   Map<String, dynamic> toJson() => _$GetResponseProductsToJson(this);
-}
-
-@JsonSerializable()
-class Ratings {
-  dynamic rate;
-  dynamic count;
-
-  Ratings({
-    this.rate,
-    this.count,
-  });
-
-  factory Ratings.fromJson(Map<String, dynamic> json) =>  _$RatingsFromJson(json);
-
-  Map<String, dynamic> toJson() => _$RatingsToJson(this);
 }

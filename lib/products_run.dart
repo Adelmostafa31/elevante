@@ -9,6 +9,7 @@ class ProductsRun extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowMaterialGrid: false,
       initialRoute: Routes.products,
       theme: theme(),
       debugShowCheckedModeBanner: false,

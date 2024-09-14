@@ -8,13 +8,13 @@ part of 'get_response_products.dart';
 
 GetResponseProducts _$GetResponseProductsFromJson(Map<String, dynamic> json) =>
     GetResponseProducts(
-      id: json['id'] as String,
+      id: (json['id'] as num).toInt(),
       title: json['title'] as String,
       description: json['description'] as String,
       price: json['price'],
       category: json['category'] as String,
       image: json['image'] as String,
-      rating: Ratings.fromJson(json['rating'] as Map<String, dynamic>),
+      rating: json['rating'] as Map<String, dynamic>,
     );
 
 Map<String, dynamic> _$GetResponseProductsToJson(
@@ -27,14 +27,4 @@ Map<String, dynamic> _$GetResponseProductsToJson(
       'category': instance.category,
       'image': instance.image,
       'rating': instance.rating,
-    };
-
-Ratings _$RatingsFromJson(Map<String, dynamic> json) => Ratings(
-      rate: json['rate'],
-      count: json['count'],
-    );
-
-Map<String, dynamic> _$RatingsToJson(Ratings instance) => <String, dynamic>{
-      'rate': instance.rate,
-      'count': instance.count,
     };
