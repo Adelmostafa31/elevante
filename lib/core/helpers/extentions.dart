@@ -44,8 +44,8 @@ extension IntExtension on int? {
 
 Widget circular = Center(
   child: SizedBox(
-    width: 150,
-    height: 150,
+    width: 85,
+    height: 85,
     child: Lottie.asset('assets/images/loading.json'),
   ),
 );
