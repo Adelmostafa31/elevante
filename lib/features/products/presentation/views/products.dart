@@ -78,7 +78,7 @@ class _ProductsState extends State<Products> {
                               Row(
                                 children: [
                                   Text(
-                                    'Rebiew(${(state).productsList[index].rating['rate'].toString()})',
+                                    'Review(${(state).productsList[index].rating['rate'].toString()})',
                                   ),
                                   const Icon(
                                     Icons.star,
